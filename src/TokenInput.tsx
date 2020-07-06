@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 import { Input, Button, Col, Row } from 'antd'
+import { DeleteOutlined, SwapOutlined } from '@ant-design/icons'
 import { tokenState } from './states'
 
 const shuffled = () => {
@@ -20,15 +21,20 @@ export const TokenInput = () => {
 
   return (
     <Row>
-      <Col span={18}>
-        <Input size="small" value={token} onChange={event => setToken(event.target.value)} />
+      <Col flex="auto">
+        <Input
+          value={token}
+          onChange={event => setToken(event.target.value)}
+        />
       </Col>
-      <Col span={6}>
-        <Button.Group size="small">
-          <Button type="primary" onClick={() => setToken('')}>Limpar</Button>
-          <Button type="primary" onClick={() => setToken(shuffled())}>Gerar</Button>
-        </Button.Group>
-      </Col>
+      <Button.Group>
+        <Button type="primary" onClick={() => setToken(shuffled())}>
+          <SwapOutlined />
+        </Button>
+        <Button danger type="primary" onClick={() => setToken('')}>
+          <DeleteOutlined />
+        </Button>
+      </Button.Group>
     </Row>
   )
 }

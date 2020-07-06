@@ -10,10 +10,10 @@ const columns = [
 ]
 
 const dataSource = [
-  { key: 0, init: 'S', a: 'S → aAc', b: 'S → C', c: 'S → C', _f: '' },
-  { key: 1, init: 'A', a: 'A → aBc', b: 'A → bA', c: 'A → ε', _f: '' },
-  { key: 2, init: 'B', a: 'B → aB', b: 'B → C', c: 'B → cCa', _f: ''},
-  { key: 3, init: 'C', a: '-', b: 'C → bBa', c: 'C → c', _f: '' },
+  { key: 0, init: 'S', a: 'S → aAc', b: 'S → C', c: 'S → C', _f: '-' },
+  { key: 1, init: 'A', a: 'A → aBc', b: 'A → bA', c: 'A → ε', _f: '-' },
+  { key: 2, init: 'B', a: 'B → aB', b: 'B → C', c: 'B → cCa', _f: '-' },
+  { key: 3, init: 'C', a: '-', b: 'C → bBa', c: 'C → c', _f: '-' },
 ]
 
 export const MappingTable = () => {
